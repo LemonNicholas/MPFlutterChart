@@ -1,8 +1,8 @@
 name: mp_chart
 description: A Flutter chart package just like AndroidMPChart, apply easy to use chart for Flutter.
-version: 0.3.2
-author: LemonNicholas
-homepage: https://github.com/LemonNicholas/MPFlutterChart
+version: 0.3.1
+author: SunPointed<410338643@qq.com>
+homepage: https://github.com/SunPointed/MPFlutterChart
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -22,9 +22,9 @@ dependencies:
 #    git:
 #      url: git://github.com/LemonNicholas/MPFlutterChart.git
 
-#  carousel_pro:
-#     git:
-#      url: git://github.com/jlouage/flutter-carousel-pro.git
+  carousel_pro:
+     git:
+      url: git@github.com:LemonNicholas/MPFlutterChart.git
 
 
 dev_dependencies:
