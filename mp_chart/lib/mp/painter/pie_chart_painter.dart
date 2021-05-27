@@ -74,6 +74,8 @@ class PieChartPainter extends PieRadarChartPainter<PieData> {
   /// Hole color
   Color _holeColor;
 
+  TextStyle _centerTextStyle;
+
   MPPointF _centerTextOffset;
 
   TypeFace _centerTextTypeface;
@@ -121,7 +123,8 @@ class PieChartPainter extends PieRadarChartPainter<PieData> {
       double maxAngle,
       double minAngleForSlices,
       Color backgroundColor,
-      Color holeColor)
+      Color holeColor,
+      TextStyle centerTextStyle)
       : _drawEntryLabels = drawEntryLabels,
         _drawHole = drawHole,
         _drawSlicesUnderHole = drawSlicesUnderHole,
@@ -139,6 +142,7 @@ class PieChartPainter extends PieRadarChartPainter<PieData> {
         _centerTextTypeface = centerTextTypeface,
         _entryLabelTypeface = entryLabelTypeface,
         _holeColor = holeColor,
+        _centerTextStyle = centerTextStyle,
         super(
             data,
             animator,
@@ -525,5 +529,9 @@ class PieChartPainter extends PieRadarChartPainter<PieData> {
 
   Color getHoleColor() {
     return _holeColor;
+  }
+
+  TextStyle getCenterTextStyle(){
+    return _centerTextStyle;
   }
 }

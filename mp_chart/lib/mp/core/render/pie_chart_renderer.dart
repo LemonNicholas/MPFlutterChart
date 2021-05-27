@@ -787,6 +787,7 @@ class PieChartRenderer extends DataRenderer {
   /// sense when center-hole is enabled
   void drawCenterText(Canvas c) {
     String centerText = _painter.getCenterText();
+    TextStyle centerTextStyle = _painter.getCenterTextStyle();
 
     if (_painter.isDrawCenterTextEnabled() && centerText != null) {
       MPPointF center = _painter.getCenterCircleBox();
@@ -831,8 +832,10 @@ class PieChartRenderer extends DataRenderer {
 
       c.save();
 
+      var color = (centerTextStyle!=null && centerTextStyle.color!=null) ? centerTextStyle.color : ColorUtils.BLACK;
+      var textSize = (centerTextStyle!=null && centerTextStyle.fontSize!=null) ? centerTextStyle.fontSize : 12;
       _centerTextPaint = PainterUtils.create(_centerTextPaint, centerText,
-          ColorUtils.BLACK, Utils.convertDpToPixel(12));
+          color, Utils.convertDpToPixel(textSize));
       _centerTextPaint.layout();
       _centerTextPaint.paint(
           c,

@@ -30,6 +30,7 @@ class PieChartController extends PieRadarController<PieChartPainter> {
   TypeFace entryLabelTypeface;
   Color backgroundColor;
   Color holeColor;
+  TextStyle centerTextStyle;
 
   PieChartController({
     this.drawEntryLabels = true,
@@ -50,6 +51,7 @@ class PieChartController extends PieRadarController<PieChartPainter> {
     this.entryLabelTypeface,
     this.backgroundColor,
     this.holeColor = ColorUtils.WHITE,
+    this.centerTextStyle,
     IMarker marker,
     Description description,
     XAxisSettingFunction xAxisSettingFunction,
@@ -156,6 +158,7 @@ class PieChartController extends PieRadarController<PieChartPainter> {
       minAngleForSlices,
       backgroundColor,
       holeColor,
+      centerTextStyle
     );
   }
 
