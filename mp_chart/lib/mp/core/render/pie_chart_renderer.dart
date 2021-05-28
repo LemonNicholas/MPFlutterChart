@@ -833,7 +833,7 @@ class PieChartRenderer extends DataRenderer {
       c.save();
 
       var color = (centerTextStyle!=null && centerTextStyle.color!=null) ? centerTextStyle.color : ColorUtils.BLACK;
-      var textSize = (centerTextStyle!=null && centerTextStyle.fontSize!=null) ? centerTextStyle.fontSize : 12;
+      var textSize = (centerTextStyle!=null && centerTextStyle.fontSize!=null) ? centerTextStyle.fontSize.toDouble() : 12.0;
       _centerTextPaint = PainterUtils.create(_centerTextPaint, centerText,
           color, Utils.convertDpToPixel(textSize));
       _centerTextPaint.layout();
