@@ -14,7 +14,9 @@ dependencies:
   screenshot: ^0.1.1
   path_drawing: ^0.4.1
   image_gallery_saver: ^1.2.2
-  optimized_gesture_detector: ^0.0.6
+  optimized_gesture_detector:
+    git:
+      url: https://github.com/LemonNicholas/OptimizedGestureDetector.git
   vector_math: ^2.0.8
 
 dev_dependencies:
